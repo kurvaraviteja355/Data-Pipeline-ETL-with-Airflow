@@ -68,7 +68,7 @@ Here's the directory organization:
 ```bash
 ├── README.md
 ├── Report
-│   ├── Report_Shravan_Kuchkula.ipynb
+│   ├── Report_Rkurva.ipynb
 │   └── dwh-streeteasy.cfg
 ├── docker-compose.yml
 ├── images
@@ -102,8 +102,8 @@ Here's the directory organization:
 
 **Destination S3 datasets and Redshift Table**:
 After each successful run of the DAG, two files are stored in the destination bucket:
-* `s3://skuchkula-etl/unique_valid_searches_<date>.csv`: Contains a list of unique valid searches for each day.
-* `s3://skuchkula-etl/valid_searches_<date>.csv`: Contains a dataset with the following fields:
+* `s3://rkurva-etl/unique_valid_searches_<date>.csv`: Contains a list of unique valid searches for each day.
+* `s3://rkurva-etl/valid_searches_<date>.csv`: Contains a dataset with the following fields:
     * user_id: Unique id of the user
     * num_valid_searches: Number of valid searches
     * avg_listings: Avg number of listings for that user
@@ -117,7 +117,7 @@ After each successful run of the DAG, two files are stored in the destination bu
 
 **unique_valid_searches_{date}.csv** contains unique valid searches per day:
 ```bash
-s3://skuchkula-etl/
+s3://rkurva-etl/
 unique_valid_searches_20180120.csv
 unique_valid_searches_20180121.csv
 unique_valid_searches_20180122.csv
@@ -128,7 +128,7 @@ unique_valid_searches_20180214.csv
 
 **valid_searches_{date}.csv** contains the valid searches dataset per day:
 ```bash
-s3://skuchkula-etl/
+s3://rkurva-etl/
 valid_searches_20180120.csv
 valid_searches_20180121.csv
 valid_searches_20180122.csv
